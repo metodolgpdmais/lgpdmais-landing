@@ -13,15 +13,21 @@ lgpdmais-landing/
 
 > O `index.html` e os arquivos em `assets/` são a versão **estática renderizada** da página original (salva via navegador e validada visualmente como idêntica). Inclui os estilos Elementor e o comportamento de accordion das perguntas frequentes, tudo funcionando sem WordPress.
 
-## Deploy no GitHub Pages
+## Publicação
 
-1. O repositório já está publicado em `https://metodolgpdmais.github.io/lgpdmais-landing/` com Pages ativado (branch `main`, pasta `/`).
-2. Para atualizar: faça o commit e `git push` — o Pages publica automaticamente.
+- **Repositório**: `https://metodolgpdmais.github.io/lgpdmais-landing/` (GitHub Pages, branch `main`, pasta `/`).
+- **Domínio**: `https://lgpdmais.site` (via arquivo `CNAME` + registros DNS apontando para o GitHub Pages).
 
-### Usando domínio próprio (ex.: `lgpdmais.site`)
-- Crie um arquivo `CNAME` na raiz com o domínio (ex.: `www.lgpdmais.site`).
-- No painel do domínio, configure os registros DNS do GitHub Pages (A/CNAME apontando para `185.199.108.153` etc.).
-- Documentação oficial: https://docs.github.com/pt/pages
+### DNS (registros ativos)
+| Tipo | Nome | Conteúdo |
+|---|---|---|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `metodolgpdmais.github.io` |
+
+Para atualizar o site: faça o commit e `git push` — o Pages publica automaticamente.
 
 ## Links dos CTAs
 
