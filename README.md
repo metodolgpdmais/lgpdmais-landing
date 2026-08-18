@@ -1,26 +1,22 @@
 # LGPD+ — Landing Page (estática)
 
-Réplica da landing page do WordPress (`lgpdmais.site`) em **HTML/CSS puro**, sem backend. Planejada para hospedar no **GitHub Pages**.
+Réplica fiel da landing page do WordPress (`lgpdmais.site`) em **HTML/CSS/JS estático**, sem backend. Hospedada no **GitHub Pages**.
 
 ## Estrutura
 
 ```
 lgpdmais-landing/
-├── index.html          # Página principal
-├── css/
-│   └── style.css       # Estilos (fundo escuro + verde neon, botão animado, accordion)
-├── js/
-│   └── main.js         # Accordion de Perguntas Frequentes
-├── assets/
-│   └── img/            # Imagens baixadas do WordPress original
+├── index.html          # Página principal (estrutura HTML renderizada do Elementor)
+├── assets/             # CSS, JS e imagens da página (renomeados do original)
 └── .gitignore
 ```
 
+> O `index.html` e os arquivos em `assets/` são a versão **estática renderizada** da página original (salva via navegador e validada visualmente como idêntica). Inclui os estilos Elementor e o comportamento de accordion das perguntas frequentes, tudo funcionando sem WordPress.
+
 ## Deploy no GitHub Pages
 
-1. Crie um repositório no GitHub e envie este conteúdo (`git remote add origin <url>` + `git push`).
-2. No GitHub: **Settings → Pages → Source: Deploy from a branch → branch `main`, pasta `/`**.
-3. O site fica disponível em `https://<usuario>.github.io/<repositorio>/`.
+1. O repositório já está publicado em `https://metodolgpdmais.github.io/lgpdmais-landing/` com Pages ativado (branch `main`, pasta `/`).
+2. Para atualizar: faça o commit e `git push` — o Pages publica automaticamente.
 
 ### Usando domínio próprio (ex.: `lgpdmais.site`)
 - Crie um arquivo `CNAME` na raiz com o domínio (ex.: `www.lgpdmais.site`).
@@ -31,4 +27,4 @@ lgpdmais-landing/
 
 Os botões "PROTEJA MINHA EMPRESA AGORA!" apontam para:
 - `#price` (âncora da seção de preço)
-- `https://metodo.lgpdmais.com.br/site.php` (sistema de cursos — verificar se esse destino continua ativo)
+- `https://metodo.lgpdmais.com.br/site.php` (sistema de cursos — **verificar se esse destino continua ativo**, pois o `site.php` não existe no VideoAulas+ de produção)
